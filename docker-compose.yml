@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./dvdrental:/dvdrental
+      - .db/:/var/lib/postgressql/data
+    ports:
+      - ${POSTGRES_OUT_PORT}:${POSTGRES_IN_PORT}
+# unzip files from artefacts/dvdrental.zip 
+# and use pg_restore -U postgres -d dvdrental /dvdrental    
