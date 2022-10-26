@@ -4,3 +4,9 @@ __pycache__
 */__pycache__
 */*.pyc
 artefacts/*.*
+
+/dbt_test/target/
+/dbt_test/dbt_packages/
+/dbt_test/logs/*.*
+logs/*.*
+dbt_test/profiles.yml
