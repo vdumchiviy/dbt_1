@@ -36,3 +36,7 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+
+    my_models:
+      +materialized: table
+      tags: "my_marts"
