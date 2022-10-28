@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: miami
+    description: My transformation written in Python
+
+    # Configure in ways that feel intuitive and familiar
+    config:
+      materialized: table
+      # tags: ['python']
+
+    # Test the results of my Python transformation
+    columns:
+      - name: "n"
+        tests:
+          - unique
+          - not_null
+
+      - name: "O3"
+      - name: "state"
+      - name: "county"
+      - name: "month"
+      - name: "geom"
+
+
+    # tests:
+    #   # Write your own validation logic (in SQL) for Python results
+    #   - custom_generic_test

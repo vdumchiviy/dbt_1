@@ -40,3 +40,7 @@ models:
     my_models:
       +materialized: table
       tags: "my_marts"
+
+    csv:
+      +materialized: table
+      tags: "csv"
